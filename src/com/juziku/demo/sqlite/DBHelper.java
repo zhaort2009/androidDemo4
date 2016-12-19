@@ -26,6 +26,7 @@ public class DBHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		executeSchema(db, "schema.sql");
+		Log.w("Helper.onCreat", "创建数据库");
 	}
 
 	/**
@@ -61,7 +62,10 @@ public class DBHelper extends SQLiteOpenHelper {
 			while ((line = in.readLine()) != null) {
 				buffer += line;
 				if (line.trim().endsWith(";")) {
-					db.execSQL(buffer.replace(";", ""));
+					String zstring=buffer.replace(";", "");
+					Log.w("create_sql", zstring);
+					db.execSQL(zstring);
+					Log.w("execSQL_db", zstring);
 					buffer = "";
 				}
 			}
