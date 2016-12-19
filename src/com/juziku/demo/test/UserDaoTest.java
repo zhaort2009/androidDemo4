@@ -3,6 +3,7 @@ package com.juziku.demo.test;
 import java.util.List;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.test.AndroidTestCase;
 
 import com.juziku.demo.dao.UserDao;
@@ -18,8 +19,8 @@ import com.juziku.demo.data.User;
  */
 public class UserDaoTest extends AndroidTestCase {
 	
-	public void testSaveUser(){
-		UserDao dao = new UserDao(this.getContext());
+	public void testSaveUser(Context tcontext){
+		UserDao dao = new UserDao(tcontext);
 		ContentValues values = new ContentValues();
 		values.put("userId", 211);
 		values.put("name", "张三");
