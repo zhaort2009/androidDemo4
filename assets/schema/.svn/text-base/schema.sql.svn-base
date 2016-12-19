@@ -1,0 +1,31 @@
+CREATE TABLE [weizhishi] (
+  [id] INTEGER PRIMARY KEY AUTOINCREMENT, 
+  [tagsId] INTEGER,
+  [title] TEXT,
+  [content] TEXT,
+  [picUrl] TEXT,
+  [pubTime] TEXT,
+  [state] INTEGER
+);
+CREATE TABLE [tags](
+  [id] INTEGER, 
+  [text] TEXT,
+  [icoUrl] TEXT,
+  [updateTime] LONG,
+  [state] INTEGER,
+  [orderNum] INTEGER
+);
+CREATE TABLE [app_version] (
+  [id] INTEGER PRIMARY KEY AUTOINCREMENT,
+  [description] TEXT,
+  [updateUrl] TEXT,
+  [versionNum] INTEGER,
+  [type] INTEGER
+);
+CREATE TABLE [favorite] (
+  [id] INTEGER,
+  [title] TEXT,
+  [content] TEXT,
+  [image_uri] TEXT,
+  [_id] INTEGER PRIMARY KEY AUTOINCREMENT
+);

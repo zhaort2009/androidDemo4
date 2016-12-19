@@ -1,0 +1,6 @@
+CREATE TABLE user(
+  id INTEGER PRIMARY KEY AUTOINCREMENT, 
+  userId INTEGER,
+  name TEXT
+);
+
