@@ -13,5 +13,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Create database"/>
-
+ 
+      <Button
+        android:id="@+id/insert_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insert data" />
+    
+    
+    
+    
+    <Button
+        android:id="@+id/query_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Query data" />
 </LinearLayout>

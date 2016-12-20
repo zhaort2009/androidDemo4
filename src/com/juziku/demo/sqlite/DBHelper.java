@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
 
 public class DBHelper extends SQLiteOpenHelper {
 
@@ -27,6 +28,7 @@ public class DBHelper extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		executeSchema(db, "schema.sql");
 		Log.w("Helper.onCreat", "创建数据库");
+		Toast.makeText(mContext, "Create succeeded", Toast.LENGTH_SHORT). show();
 	}
 
 	/**
@@ -46,6 +48,7 @@ public class DBHelper extends SQLiteOpenHelper {
 			String schemaName = "update" + (oldVersion + i) + "_"
 					+ (oldVersion + i + 1) + ".sql";
 			executeSchema(db, schemaName);
+			Log.w("Helper.onUpgrade", "更新数据库"+(i+1)+"次");
 		}
 	}
 
